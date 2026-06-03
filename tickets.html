@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - Firenze Wizarding Night</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Firenze Wizarding Night</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tickets.html" class="active">Tickets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero small-hero">
+    <div class="hero-content">
+
+        <h1>Buy Your Tickets</h1>
+
+        <p>Secure your place at the most magical night in Florence.</p>
+
+    </div>
+</section>
+
+<!-- TICKET OPTIONS -->
+<section>
+
+    <h2 class="section-title">Ticket Options</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Standard</h3>
+            <p>Access to all main events and activities.</p>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <p>Priority seating + exclusive magical drinks.</p>
+        </div>
+
+        <div class="card">
+            <h3>VIP</h3>
+            <p>Backstage access + special wizard gift pack.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FORM -->
+<section>
+
+    <h2 class="section-title">Reservation Form</h2>
+
+    <form onsubmit="showTicketMessage(event)">
+
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="number" placeholder="Number of Tickets" min="1" max="10" required>
+
+        <select required>
+            <option value="">Select Ticket Type</option>
+            <option>Standard</option>
+            <option>Premium</option>
+            <option>VIP</option>
+        </select>
+
+        <textarea placeholder="Special requests (optional)"></textarea>
+
+        <label>
+            <input type="checkbox" required>
+            I agree to the terms and conditions
+        </label>
+
+        <button type="submit">Confirm Booking</button>
+
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <p id="ticket-success" style="display:none; color:#ffd700; text-align:center; margin-top:20px;">
+        🦉 Owl Post delivered! Your ticket is confirmed.
+    </p>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+function showTicketMessage(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    // show message
+    document.getElementById("ticket-success").style.display = "block";
+
+    // clear form
+    form.reset();
+}
+</script>
+
+<footer>
+    <p>© 2026 Firenze Wizarding Night | Florence, Italy</p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Firenze Wizarding Night</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Firenze Wizarding Night</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero small-hero">
+    <div class="hero-content">
+
+        <h1>Contact Us</h1>
+
+        <p>
+            Have questions about the magical event? Send us an owl or find us in Florence.
+        </p>
+
+    </div>
+</section>
+
+<!-- CONTACT INFO -->
+<section>
+
+    <h2 class="section-title">Get in Touch</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Email</h3>
+            <p>info@wizardingnight.it</p>
+        </div>
+
+        <div class="card">
+            <h3>Phone</h3>
+            <p>+39 351 332 8431</p>
+        </div>
+
+        <div class="card">
+            <h3>Location</h3>
+            <p>Giunti Odeon - Cinema, Florence</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FORM -->
+<section>
+
+    <h2 class="section-title">Send a Message</h2>
+
+    <form onsubmit="showContactMessage(event)">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <p id="contact-success" style="display:none; color:#ffd700; text-align:center; margin-top:20px;">
+        🦉 Your owl has been sent to Hogwarts 🪄✨
+    </p>
+
+</section>
+
+<!-- MAP -->
+<section>
+
+    <h2 class="section-title">Find Us</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0899166302365!2d11.252489999999986!3d43.770992299999996!2m3!1f0!2f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5401d134bbeb%3A0xcd49bb1e9005dc80!2sGiunti%20Odeon%20-%20Cinema!5e0!3m2!1sen!2sit!4v1780495319545!5m2!1sen!2sit"
+        width="100%"
+        height="350"
+        style="border:0;"
+        loading="lazy">
+    </iframe>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+function showContactMessage(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    // show owl message
+    document.getElementById("contact-success").style.display = "block";
+
+    // clear form
+    form.reset();
+}
+</script>
+
+<footer>
+    <p>© 2026 Firenze Wizarding Night | Florence, Italy</p>
+</footer>
+
+</body>
+</html>
